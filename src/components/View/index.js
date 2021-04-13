@@ -5,7 +5,7 @@ const View = (props) => (
   <div
     {...props}
     style={{
-      maxWidth: "600px",
+      maxWidth: "2000px",
       margin: "0 auto",
       width: "100vw",
     }}

@@ -1,61 +1,35 @@
 import React from "react";
-// import { Redirect } from "@reach/router";
-// import Logo from "../../components/Logo";
-//import View from "../../components/View";
-// import SearchField from "../../components/SearchField";
-// import SearchItem from "../../components/SearchItem";
-import Button from "../../components/Button";
-import queryString from "query-string";
+
+import { Link } from "@reach/router";
+import View from "../../components/View";
 import "./home.css";
 
-const Home = () => {
-  /*
-  const [searchResult, setSearchResult] = React.useState([]);
-  const searchText = "Kanye";
+const HomePage = () => {
+  /* 
+  const redirectUri = process.env.REACT_APP_SYSTEMET_REDIRECT_URI;
+  const clientId = process.env.REACT_APP_SYSTEMET_CLIENT;
+  const url = `https://api.rawg.io/api/auth/login?client_id=${clientId}}&show_dialog=true&response_type=token&&redirect_uri=${redirectUri}`; */
 
-  const { access_token } = queryString.parse(window.location.hash);
-  React.useEffect(() => {
-    const rootUrl = "https://yrgo.github.io/api/movies/the-room.json";
-
-    /* if (!searchText) {
-      return;
-    } */
-  /*
-    fetch(`${rootUrl}`, {
-      /*  headers: {
-        Authorization: "Bearer " + access_token,
-      },*/
-  /*
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-      });
-  }, []);
-*/
   return (
-    /*
-    <div className="home-view">
-      <div
-        className="search-items"
-        style={{ width: "100%", marginBottom: "100px" }}
-      >
-        {searchResult.map((item, key) => {
-          return (
-            <div
-              key={key}
-              image={item.images[0].url}
-              title={item.artists[0].name}
-              album={item.name}
-              year={new Date(item.release_date).getFullYear()}
-              playUrl={item.external_urls.spotify}
-            />
-          );
-        })} 
+    <View>
+      <div className="home-view">
+        <div className="container">
+          <h1> Top Games</h1>
+
+          <Link className="buttonStyled" to={"/toprated"}>
+            Top Rated Games
+          </Link>
+          <Link className="buttonStyled" to="/xbox">
+            New Releases
+          </Link>
+          <Link className="buttonStyled" to="/nintendo"></Link>
+          <Link className="buttonStyled" to="/pc">
+            PC
+          </Link>
+        </div>
       </div>
-    </div> */
-    <Button> Hello </Button>
+    </View>
   );
 };
 
-export default Home;
+export default HomePage;
