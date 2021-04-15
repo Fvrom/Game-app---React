@@ -1,21 +1,18 @@
 import React from "react";
 import View from "../../components/View";
 
-import "./xbox.css";
+import "./newRelease.css";
 
-const XboxPage = () => {
+const NewReleasePage = () => {
   return (
     <View>
       <div className="home-view">
         <div className="container">
-          <h1>Top Xbox Games</h1>
-          <ul>
-            <li>MineCraft</li>
-          </ul>
+          <h1>New Releases</h1>
         </div>
       </div>
     </View>
   );
 };
 
-export default XboxPage;
+export default NewReleasePage;

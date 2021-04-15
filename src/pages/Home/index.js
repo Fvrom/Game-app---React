@@ -19,10 +19,12 @@ const HomePage = () => {
           <Link className="buttonStyled" to={"/toprated"}>
             Top Rated Games
           </Link>
-          <Link className="buttonStyled" to="/xbox">
+          <Link className="buttonStyled" to="/newrelease">
             New Releases
           </Link>
-          <Link className="buttonStyled" to="/nintendo"></Link>
+          <Link className="buttonStyled" to="/upcoming">
+            Upcoming Games
+          </Link>
           <Link className="buttonStyled" to="/pc">
             PC
           </Link>

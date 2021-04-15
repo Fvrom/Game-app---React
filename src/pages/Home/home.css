@@ -16,7 +16,7 @@
 */
 
 .buttonStyled {
-  box-shadow: inset 0.1px 0.1px 3px black;
+  box-shadow: inset 0px 1px 3px black;
   width: 200px;
   height: 50px;
   border: none;
@@ -29,4 +29,14 @@
   text-decoration: none;
   color: black;
   font-size: 14px;
+}
+
+.home-view {
+  background-image: url(https://wallpapercave.com/wp/Gtv58e3.jpg);
+  background-size: cover;
+}
+
+.container {
+  color: black;
+  background-color: burlywood;
 }

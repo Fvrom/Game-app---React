@@ -1,21 +1,18 @@
 import React from "react";
 import View from "../../components/View";
 
-import "./nintendo.css";
+import "./upcoming.css";
 
-const NintendoPage = () => {
+const UpcomingPage = () => {
   return (
     <View>
       <div className="home-view">
         <div className="container">
-          <h1>Top Nintendo Games</h1>
-          <ul>
-            <li>MineCraft</li>
-          </ul>
+          <h1>Top Upcoming Games</h1>
         </div>
       </div>
     </View>
   );
 };
 
-export default NintendoPage;
+export default UpcomingPage;

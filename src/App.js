@@ -4,8 +4,8 @@ import { Router } from "@reach/router";
 
 import HomePage from "./pages/Home";
 import TopRatedPage from "./pages/TopRated";
-import XboxPage from "./pages/Xbox";
-import NintendoPage from "./pages/Nintendo";
+import NewReleasePage from "./pages/NewRelease";
+import NintendoPage from "./pages/Upcoming";
 import PcPage from "./pages/PC";
 import "./App.css";
 
@@ -15,8 +15,8 @@ function App() {
       <Router>
         <HomePage path="/" />
         <TopRatedPage path="/toprated" />
-        <XboxPage path="/xbox" />
-        <NintendoPage path="/nintendo" />
+        <NewReleasePage path="/newrelease" />
+        <NintendoPage path="/upcoming" />
         <PcPage path="/pc" />
       </Router>
     </div>

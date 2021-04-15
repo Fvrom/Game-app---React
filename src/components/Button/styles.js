@@ -5,6 +5,6 @@ export const ButtonStyled = styled.button`
   height: 50px;
   border: none;
   border-radius: 10px;
-  background-color: pink;
+  background-color: white;
   margin-bottom: 15px;
 `;
