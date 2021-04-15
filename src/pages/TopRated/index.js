@@ -2,6 +2,7 @@ import React from "react";
 import View from "../../components/View";
 import queryString from "query-string";
 import "./toprated.css";
+import TopGamesItem from "../../components/TopGamesItem";
 //import Results from "./Results";
 
 //const Search = () => {
@@ -15,27 +16,36 @@ const TopRatedPage = () => {
 
   const { access_token } = queryString.parse(window.location.hash);
 
-  // React.useEffect(() => {
-  const rootUrl = `https://api.rawg.io/api/games?metacritic=80,100?key=${clientId}`;
+  const [TopGames, setTopGames] = React.useState([]);
 
-  fetch(`${rootUrl}`, {
-    headers: {
-      Authorization: "Bearer " + access_token,
-    },
-  })
-    .then((res) => res.json())
-    .then((json) => {
-      console.log(json["results"]);
-    });
+  React.useEffect(() => {
+    const rootUrl = `https://api.rawg.io/api/games?ordering=-metacritic?key=${clientId}`;
+
+    fetch(`${rootUrl}`, {
+      headers: {
+        Authorization: "Bearer " + access_token,
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        //setTopGames(json.results);
+        //console.log(json["results"]);
+        //let results = json["results"];
+        console.log(json.results);
+      });
+  });
+
+  /*
+  const arr = [];
+  Object.keys(results).forEach((key) =>
+    arr.push({ name: key, value: results[key] })
+  ); */
 
   return (
     <View>
       <div className="home-view">
         <div className="container">
           <h1>Top Rated Games</h1>
-          <ul>
-            <li></li>
-          </ul>
         </div>
       </div>
     </View>
