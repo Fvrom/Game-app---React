@@ -31,21 +31,12 @@ const TopRatedPage = () => {
       .then((res) => res.json())
       .then((json) => {
         console.log(json.results);
-        //  setTopGames(json.results);
+
       });
 
-        //setTopGames(json.results);
-        //console.log(json["results"]);
-        //let results = json["results"];
-        console.log(json.results);
+        
       });
-  });
 
-  /*
-  const arr = [];
-  Object.keys(results).forEach((key) =>
-    arr.push({ name: key, value: results[key] })
-  ); */
 
 
   return (
