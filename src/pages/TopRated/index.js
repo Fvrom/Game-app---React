@@ -1,5 +1,6 @@
 import React from "react";
 import View from "../../components/View";
+import Header from "../../components/Header";
 import queryString from "query-string";
 import "./toprated.css";
 
@@ -12,11 +13,9 @@ import TopGamesItem from "../../components/TopGamesItem";
 
 // const [gameResults, setGameResults] = useState([])
 
-
 const TopRatedPage = () => {
   const clientId = process.env.REACT_APP_SYSTEMET_CLIENT;
   const { access_token } = queryString.parse(window.location.hash);
-
 
   const [TopGames, setTopGames] = React.useState([]);
 
@@ -32,27 +31,20 @@ const TopRatedPage = () => {
       .then((json) => {
         console.log(json.results);
 
+        // setTopGames(json.results);
       });
-
-        
-      });
-
-
+  });
 
   return (
-    <View>
-      <div className="home-view">
-        <div className="container">
-          <h1>Top Rated Games</h1>
-
-
-          {TopGames.map((item, key) => {
-            return <GameCard key={key} title={item.name} />;
-          })}
-
-        </div>
-      </div>
-    </View>
+    <>
+      <Header></Header>
+      <View>
+        <h1>Top Rated Games</h1>
+        {TopGames.map((item, key) => {
+          return <GameCard key={key} title={item.name} />;
+        })}
+      </View>
+    </>
   );
 };
 
