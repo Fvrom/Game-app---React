@@ -24,11 +24,11 @@ const HomePage = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-       //console.log(json.results);
+       console.log(json.results);
 
         setAnticipatedGames(json.results);
       });
-  });
+  }, []);
 
   return (
     <>
@@ -38,19 +38,22 @@ const HomePage = () => {
       <View>
       
         {AnticipatedGames.map((item, key) => {
-         /*
-          item.platforms.map((item, key) => { 
-            //console.log(item.platform);
-           
-           return <li>{item.platform.name </li> 
-          /*  item.platform.map((item,key) => {
-              console.log(item.name);
-            }) 
-          }) /* 
- 
+
          
-*/ 
-          return <GameCard key={key} image={item.background_image} title={item.name} released={item.released} platforms={item.platform} />;
+          // item.platforms.map((platformItem, platformItemIndex) => { 
+          //   // console.log('platform', item.platform);
+           
+          // //  return 
+          // //   item.platform.map((item,key) => {
+          // //     console.log(item.platform);
+          // //   }) 
+
+          // console.log(platformItem.platform.name)
+          // return <GameCard key={platformItemIndex} platforms={platformItem.platform.name} />
+          // }) 
+          
+          return <GameCard key={key} item={item} />;
+
         })}
                
         
