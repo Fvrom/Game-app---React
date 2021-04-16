@@ -3,10 +3,9 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-image: url(https://wallpapercave.com/wp/Gtv58e3.jpg);
-  background-size: cover;
+  background-color: lightslategrey;
 }
 
 .container {
@@ -14,9 +13,8 @@
   grid-template-columns: 1fr;
   /* grid-template-rows: repeat(2, 1fr); */
   justify-content: center;
-
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 @media screen and (min-width: 700px) {

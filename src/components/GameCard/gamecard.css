@@ -2,19 +2,24 @@
   margin: 0;
 }
 .card {
-  background-color: whitesmoke;
+  background-color: rgb(245, 245, 245, 0.6);
   height: 35rem;
   border-radius: 5%;
   display: flex;
-
   flex-direction: column;
   margin: 1rem;
+  padding: 0.7rem;
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 px rgba(0, 0, 0, 0.6);
 }
 
 .image-container {
   margin: 0;
   width: 100%;
   height: 20rem;
+  margin-bottom: 2rem;
 }
 .image-container img {
   width: 100%;

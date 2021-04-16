@@ -1,19 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./gamecard.css";
-import image from "./images.jpg";
+
 
 const GameCard = (props) => {
   return (
     <div className="card">
       <div className="image-container">
-        <img src={image}></img>
+      <img src={props.image} alt={"game"}></img>
       </div>
+      <div> 
       <h3>{props.title}</h3>
-      <h2>Released: {props.released}</h2>
+      <h2>Release: {props.released}</h2>
       <p>Metacritic: {props.metacritic}</p>
       <p> Availble on platforms:</p>
-      <p>{props.platsforms}</p>
+      <li>{props.platsforms}</li>
+      <li>{props.platsforms}</li>
+      </div> 
     </div>
   );
 };

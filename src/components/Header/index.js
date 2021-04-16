@@ -8,13 +8,16 @@ const Header = (props) => {
 return (
 <div>
     <nav className="header_view">
-        <ul> 
+        <ul>
         <li> <Link className="buttonStyled" to={"/toprated"}>
         Top Rated Games
         </Link></li>
         <li><Link className="buttonStyled" to="/newrelease">
         New Releases
         </Link></li>
+        <li> <Link className="home_button_style"  to={"/"}>
+        Home 
+        </Link></li> 
         <li><Link className="buttonStyled" to="/upcoming">
         Upcoming Games
         </Link></li>
