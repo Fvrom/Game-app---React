@@ -6,7 +6,7 @@ import HomePage from "./pages/Home";
 import TopRatedPage from "./pages/TopRated";
 import NewReleasePage from "./pages/NewRelease";
 import NintendoPage from "./pages/Upcoming";
-import PcPage from "./pages/PC";
+import PgByPage from "./pages/PgBy";
 import "./App.css";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <TopRatedPage path="/toprated" />
         <NewReleasePage path="/newrelease" />
         <NintendoPage path="/upcoming" />
-        <PcPage path="/pc" />
+        <PgByPage path="/pgby" />
       </Router>
     </div>
   );

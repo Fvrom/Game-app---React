@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "@reach/router";
 import View from "../../components/View";
+import Header from "../../components/Header";
+import GameCard from "../../components/GameCard";
 import "./home.css";
 
 const HomePage = () => {
@@ -11,26 +13,21 @@ const HomePage = () => {
   const url = `https://api.rawg.io/api/auth/login?client_id=${clientId}}&show_dialog=true&response_type=token&&redirect_uri=${redirectUri}`; */
 
   return (
+  <>
+  <Header> 
+    
+  </Header>
+    
     <View>
-      <div className="home-view">
-        <div className="container">
-          <h1> Top Games</h1>
-
-          <Link className="buttonStyled" to={"/toprated"}>
-            Top Rated Games
-          </Link>
-          <Link className="buttonStyled" to="/newrelease">
-            New Releases
-          </Link>
-          <Link className="buttonStyled" to="/upcoming">
-            Upcoming Games
-          </Link>
-          <Link className="buttonStyled" to="/pc">
-            PC
-          </Link>
-        </div>
-      </div>
+      
+       <GameCard> </GameCard>
+       <GameCard> </GameCard>
+       <GameCard> </GameCard>
+       <GameCard> </GameCard>
+     
+      
     </View>
+  </>
   );
 };
 

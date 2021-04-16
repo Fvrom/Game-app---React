@@ -1,0 +1,9 @@
+.card {
+  background-color: whitesmoke;
+  width: 35re;
+  height: 35rem;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}

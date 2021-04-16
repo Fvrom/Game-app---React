@@ -1,16 +1,16 @@
 import React from "react";
 import View from "../../components/View";
 
-import "./pc.css";
+import "./pgby.css";
 
-const PcPage = () => {
+const PopularGamesByYear = () => {
   return (
     <View>
       <div className="home-view">
         <div className="container">
-          <h1>Top PC Games</h1>
+          <h1>Popular Games By Year</h1>
           <ul>
-            <li>MineCraft</li>
+            
           </ul>
         </div>
       </div>
@@ -18,4 +18,4 @@ const PcPage = () => {
   );
 };
 
-export default PcPage;
+export default PopularGamesByYear;

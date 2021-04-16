@@ -2,16 +2,18 @@ import React from "react";
 import "./view.css";
 
 const View = (props) => (
-  <div
+  <section className="view"
     {...props}
     style={{
       maxWidth: "2000px",
       margin: "0 auto",
-      width: "100vw",
+      width: "100%",
     }}
   >
+    <div className="container"> 
     {props.children}
-  </div>
+    </div>
+  </section>
 );
 
 export default View;

@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./gamecard.css"
 
 const GameCard = (props) => {
   return (
-    <div>
+    <div className="card">
       <h3>{props.title}</h3>
       <p> Availble on platforms:</p>
       <p>{props.platsforms}</p>
