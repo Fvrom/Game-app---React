@@ -3,16 +3,17 @@
 }
 .card {
   background-color: rgb(245, 245, 245, 0.6);
-  height: 40rem;
+
   border-radius: 5%;
+  border: none;
   display: flex;
   flex-direction: column;
   margin: 1rem;
   padding: 0.7rem;
-  backdrop-filter: blur(30px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  /* backdrop-filter: blur(30px); */
+
   box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 px rgba(0, 0, 0, 0.6);
+  /* text-shadow: 0 0 px rgba(0, 0, 0, 0.6); */
 }
 
 .image-container {
@@ -32,7 +33,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 10rem;
 }
 
 .card-info h3 {
@@ -48,7 +48,7 @@
 
 .card-info p {
   font-size: 1.6rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-weight: 500;
 }
 .card-info ul {
@@ -60,4 +60,6 @@
 
 .card-info li {
   font-size: 1.4rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }

@@ -22,8 +22,6 @@ const HomePage = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json.results);
-
         setAnticipatedGames(json.results);
       });
   });

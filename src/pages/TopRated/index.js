@@ -1,6 +1,7 @@
 import React from "react";
 import View from "../../components/View";
 import Header from "../../components/Header";
+import Title from "../../components/Title";
 import queryString from "query-string";
 import "./toprated.css";
 
@@ -28,19 +29,17 @@ const TopRatedPage = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json.results);
-
-        // setTopGames(json.results);
+        setTopGames(json.results);
       });
   });
 
   return (
     <>
       <Header></Header>
+      <Title title={"Top rated games"} />
       <View>
-        <h1>Top Rated Games</h1>
         {TopGames.map((item, key) => {
-          return <GameCard key={key} title={item.name} />;
+          return <GameCard key={key} item={item} rating={"Metacritic: "} />;
         })}
       </View>
     </>

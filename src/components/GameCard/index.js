@@ -11,8 +11,10 @@ const GameCard = (props) => {
       <div className="card-info">
         <h3>{props.item.name}</h3>
         <h4>Release: {props.item.released}</h4>
-        <p>{props.item.metacritic}</p>
-        <p> Available on:</p>
+        <p>
+          {props.rating} {props.item.metacritic}
+        </p>
+
         <ul>
           {props.item.platforms?.map((platformItem, platformIndex) => (
             <li key={platformIndex}>{platformItem.platform.name}</li>

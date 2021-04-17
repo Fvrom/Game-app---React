@@ -29,23 +29,24 @@ li {
 }
 .buttonStyled {
   box-shadow: 0px 1px 10px rgb(91, 105, 117);
-  width: 160px;
-  height: 35px;
+  width: 16rem;
+  height: 4rem;
   border: none;
-  border-radius: 20px;
-  background-color: white;
+  border-radius: 1rem;
+  background-color: #2b6867;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-decoration: none;
-  color: black;
-  font-size: 14px;
+  color: whitesmoke;
+  font-size: 1.6rem;
+  font-weight: 500;
   transition: transform 0.5s;
 }
 
 .buttonStyled:hover {
-  background-color: rgb(91, 105, 117);
+  background-color: #004040;
   color: white;
 
   transform: scale(1.1);
@@ -53,16 +54,17 @@ li {
 }
 
 .home-button {
-  font-size: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-content: center;
   height: 4.5rem;
   width: 14rem;
   text-decoration: none;
-  background-color: rgb(184, 185, 187);
+  background-color: #203e4a;
   box-shadow: 0px 1px 3px rgb(70, 70, 70);
   border-radius: 1rem;
+  font-size: 2.5rem;
   color: whitesmoke;
   transition: transform 0.5s;
 }
@@ -84,12 +86,14 @@ li {
     display: flex;
     height: 20rem;
   }
-  .home_button_style {
-    margin-bottom: 5px;
+  .home-button {
+    margin-bottom: 0.5rem;
+    width: 17rem;
+    height: 3.3rem;
   }
   .buttonStyled {
-    width: 170px;
-    height: 27px;
+    width: 17rem;
+    height: 3rem;
     margin-bottom: 5px;
   }
 }
