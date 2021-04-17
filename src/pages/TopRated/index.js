@@ -6,7 +6,6 @@ import "./toprated.css";
 
 import GameCard from "../../components/GameCard";
 
-import TopGamesItem from "../../components/TopGamesItem";
 //import Results from "./Results";
 
 //const Search = () => {
