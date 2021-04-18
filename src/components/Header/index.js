@@ -9,27 +9,27 @@ const Header = (props) => {
       <nav className="header_view">
         <ul>
           <li>
-            <Link className="buttonStyled" to={"/toprated"}>
+            <Link className="button_styled" to={"/toprated"}>
               Top Rated Games
             </Link>
           </li>
           <li>
-            <Link className="buttonStyled" to="/newrelease">
+            <Link className="button_styled" to="/newrelease">
               New Releases
             </Link>
           </li>
           <li>
-            <Link className="home-button" to={"/"}>
+            <Link className="home_button" to={"/"}>
               Home
             </Link>
           </li>
           <li>
-            <Link className="buttonStyled" to="/upcoming">
+            <Link className="button_styled" to="/upcoming">
               Upcoming Games
             </Link>
           </li>
           <li>
-            <Link className="buttonStyled" to="/pgby">
+            <Link className="button_styled_pgby" to="/pgby">
               PopularGamesByYear
             </Link>
           </li>

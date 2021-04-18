@@ -7,6 +7,8 @@ import TopRatedPage from "./pages/TopRated";
 import NewReleasePage from "./pages/NewRelease";
 import NintendoPage from "./pages/Upcoming";
 import PgByPage from "./pages/PgBy";
+import Search from '../src/components/search/search';
+
 import "./App.css";
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <NewReleasePage path="/newrelease" />
         <NintendoPage path="/upcoming" />
         <PgByPage path="/pgby" />
+        <Search path="/search"/>
+        
       </Router>
     </div>
   );

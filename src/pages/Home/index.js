@@ -13,7 +13,7 @@ const HomePage = () => {
   const [AnticipatedGames, setAnticipatedGames] = React.useState([]);
 
   React.useEffect(() => {
-    const url = `https://api.rawg.io/api/games?dates=2021-04-10,2022-12-10&ordering=-added?key=${clientId}`;
+    const url = `https://api.rawg.io/api/games?dates=2021-04-10,2021-05-10&ordering=-added?key=${clientId}`;
 
     fetch(`${url}`, {
       headers: {

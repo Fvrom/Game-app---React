@@ -5,16 +5,16 @@ import "./gamecard.css";
 const GameCard = (props) => {
   return (
     <div className="card">
-      <div className="image-container">
+      <div className="image_container">
         <img src={props.item.background_image} alt={"game"}></img>
       </div>
-      <div className="card-info">
+      <div className="card_info">
         <h3>{props.item.name}</h3>
         <h4>Release: {props.item.released}</h4>
         <p>
-          {props.rating} {props.item.metacritic}
+          {/* {props.rating} {props.item.metacritic} */}
         </p>
-
+        <p>Available on platforms:</p>
         <ul>
           {props.item.platforms?.map((platformItem, platformIndex) => (
             <li key={platformIndex}>{platformItem.platform.name}</li>
