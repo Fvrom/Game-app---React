@@ -13,18 +13,20 @@ const HomePage = () => {
   const [AnticipatedGames, setAnticipatedGames] = React.useState([]);
 
   React.useEffect(() => {
-    const url = `https://api.rawg.io/api/games?dates=2021-04-10,2021-05-10&ordering=-added?key=${clientId}`;
+    const url = `https://api.rawg.io/api/games?dates=2021-04-10,2021-05-10&ordering=-added?&key=${clientId}`;
 
     fetch(`${url}`, {
       headers: {
         Authorization: "Bearer " + access_token,
+        token: `${clientId}`,
       },
     })
       .then((res) => res.json())
       .then((json) => {
         setAnticipatedGames(json.results);
+        
       });
-  });
+  },[access_token, clientId]);
 
   return (
     <>
@@ -33,17 +35,7 @@ const HomePage = () => {
       <Title title={"Most anticipated games"} />
       <View>
         {AnticipatedGames.map((item, key) => {
-          // item.platforms.map((platformItem, platformItemIndex) => {
-          //   // console.log('platform', item.platform);
-
-          // //  return
-          // //   item.platform.map((item,key) => {
-          // //     console.log(item.platform);
-          // //   })
-
-          // console.log(platformItem.platform.name)
-          // return <GameCard key={platformItemIndex} platforms={platformItem.platform.name} />
-          // })
+          
 
           return <GameCard key={key} item={item} />;
         })}

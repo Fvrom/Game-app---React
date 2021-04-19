@@ -21,11 +21,12 @@ const TopRatedPage = () => {
   const [TopGames, setTopGames] = React.useState([]);
 
   React.useEffect(() => {
-    const rootUrl = `https://api.rawg.io/api/games?dates=2021-06-01,2021-12-30&ordering=-added?key=${clientId}`;
+    const rootUrl = `https://api.rawg.io/api/games?dates=2021-06-01,2021-12-30&ordering=-added?&key=${clientId}`;
 
     fetch(`${rootUrl}`, {
       headers: {
         Authorization: "Bearer " + access_token,
+        token: `${clientId}`,
       },
     })
       .then((res) => res.json())
