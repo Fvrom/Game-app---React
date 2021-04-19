@@ -47,9 +47,4 @@ const TopRatedPage = () => {
   );
 };
 
-// Release date
-// Platsforms
-// metacritic rating
-// image
-
 export default TopRatedPage;

@@ -19,11 +19,11 @@ const TopRatedPage = () => {
   const { access_token } = queryString.parse(window.location.hash);
   
   
-
+  const [search, setSearch] = React.useState("");
   const [TopGames, setTopGames] = React.useState([]);
 
   React.useEffect(() => {
-    const rootUrl = `https://api.rawg.io/api/games?dates=?&ordering=-rating?&key=${clientId}`;
+    const rootUrl = `https://api.rawg.io/api/games?dates=${search}?&ordering=-rating?&key=${clientId}`;
 
     fetch(`${rootUrl}`, {
       headers: {
@@ -35,15 +35,15 @@ const TopRatedPage = () => {
       .then((json) => {
         setTopGames(json.results);
       });
-  });
+  }, [search, access_token, clientId]);
 
   return (
     <>
       <Header></Header>
       <Title title={"Popular Games By Year"} />
-      <Search/>
+      <Search handleChange={(e) => setSearch(e.target.value)}/>
       <View>
-        {TopGames.map((item, key) => {
+        {search && TopGames.map((item, key) => {
           return <GameCard key={key} item={item} rating={"Metacritic: "} />;
         })}
       </View>

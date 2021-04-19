@@ -25,7 +25,7 @@ const HomePage = () => {
       .then((json) => {
         setAnticipatedGames(json.results);
       });
-  });
+  }, [access_token, clientId]);
 
   return (
     <>

@@ -2,19 +2,21 @@ import React from "react";
 import "./search.css"
 
 
-const SearchBar = () => (
-    <form className="search_bar" action="/pgby" method="get">
+const SearchBar = (props) => {
+    return (
+        <>
         <label htmlFor="header-search">
             <span className="visually-hidden">Search year</span>
         </label>
         <input
+         onChange={props.handleChange}
             type="text"
-            id="header-search"
             placeholder="Search year"
-            name="dates" 
+            
         />
-        <button type="submit">Search</button>
-    </form>
-);
+        <button>Search</button>
+        </>
+    )
+    };
 
 export default SearchBar;
