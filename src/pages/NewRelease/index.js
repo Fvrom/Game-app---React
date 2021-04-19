@@ -10,7 +10,7 @@ const HomePage = () => {
   const clientId = process.env.REACT_APP_SYSTEMET_CLIENT;
   const { access_token } = queryString.parse(window.location.hash);
 
-  const [AnticipatedGames, setAnticipatedGames] = React.useState([]);
+  const [NewRelease, setNewRelease] = React.useState([]);
 
   React.useEffect(() => {
     const url = `https://api.rawg.io/api/games?dates=2021-03-01,2021-04-18&platforms=18,1,7?&key=${clientId}`;
@@ -23,7 +23,7 @@ const HomePage = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        setAnticipatedGames(json.results);
+        setNewRelease(json.results);
       });
   }, [access_token, clientId]);
 
@@ -33,7 +33,7 @@ const HomePage = () => {
 
       <Title title={"New Releases"} />
       <View>
-        {AnticipatedGames.map((item, key) => {
+        {NewRelease.map((item, key) => {
           return <GameCard key={key} item={item} />;
         })}
       </View>

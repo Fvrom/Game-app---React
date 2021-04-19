@@ -1,18 +1,18 @@
-.visually-hidden {
+.search-field {
+  background-color: white;
+  color: white;
   display: flex;
   justify-content: center;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 2rem;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1rem;
-}
-
-.search_bar {
-  height: 2rem;
-  display: flex;
-  justify-content: center;
+  height: 6rem;
   background-color: rgb(32, 62, 74);
+  align-self: center;
+}
+.search-field input {
+  font-size: 1.6rem;
+  color: black;
+  height: 3rem;
+  border: none;
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 1rem;
 }

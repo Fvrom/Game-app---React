@@ -11,11 +11,11 @@ const TopRatedPage = () => {
   const clientId = process.env.REACT_APP_SYSTEMET_CLIENT;
   const { access_token } = queryString.parse(window.location.hash);
 
-  const [TopGames, setTopGames] = React.useState([]);
+  const [TopRated, setTopRated] = React.useState([]);
 
   React.useEffect(() => {
     const rootUrl = `https://api.rawg.io/api/games?ordering=-metacritic?&key=${clientId}`;
-
+ 
     fetch(`${rootUrl}`, {
       headers: {
         Authorization: "Bearer " + access_token,
@@ -24,7 +24,8 @@ const TopRatedPage = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        setTopGames(json.results);
+        
+        setTopRated(json.results);
       });
   },[access_token, clientId]);
 
@@ -33,7 +34,7 @@ const TopRatedPage = () => {
       <Header></Header>
       <Title title={"Top rated games"} />
       <View>
-        {TopGames.map((item, key) => {
+        {TopRated.map((item, key) => {
           return <GameCard key={key} item={item} rating={"Metacritic: "} />;
         })}
       </View>
