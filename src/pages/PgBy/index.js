@@ -17,13 +17,12 @@ import Search from "../../components/search/search";
 const TopRatedPage = () => {
   const clientId = process.env.REACT_APP_SYSTEMET_CLIENT;
   const { access_token } = queryString.parse(window.location.hash);
-  
-  
+
   const [search, setSearch] = React.useState("");
   const [TopGames, setTopGames] = React.useState([]);
 
   React.useEffect(() => {
-    const rootUrl = `https://api.rawg.io/api/games?dates=${search}?&ordering=-rating?&key=${clientId}`;
+    const rootUrl = `https://api.rawg.io/api/games?search=${search}?&key=${clientId}`;
 
     fetch(`${rootUrl}`, {
       headers: {
@@ -40,20 +39,16 @@ const TopRatedPage = () => {
   return (
     <>
       <Header></Header>
-      <Title title={"Popular Games By Year"} />
-      <Search handleChange={(e) => setSearch(e.target.value)}/>
+      <Title title={"Search games"} />
+      <Search handleChange={(e) => setSearch(e.target.value)} />
       <View>
-        {search && TopGames.map((item, key) => {
-          return <GameCard key={key} item={item} rating={"Metacritic: "} />;
-        })}
+        {search &&
+          TopGames.map((item, key) => {
+            return <GameCard key={key} item={item} rating={"Metacritic: "} />;
+          })}
       </View>
     </>
   );
 };
-
-// Release date
-// Platsforms
-// metacritic rating
-// image
 
 export default TopRatedPage;

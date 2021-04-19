@@ -12,7 +12,7 @@ const GameCard = (props) => {
         <h3>{props.item.name}</h3>
         <h4>Release: {props.item.released}</h4>
         <p>
-          {/* {props.rating} {props.item.metacritic} */}
+          {props.rating} {props.item.metacritic}
         </p>
         <p>Available on platforms:</p>
         <ul>

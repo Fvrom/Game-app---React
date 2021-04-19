@@ -30,7 +30,7 @@ const Header = (props) => {
           </li>
           <li>
             <Link className="button_styled_pgby" to="/pgby">
-              PopularGamesByYear
+              Search Games
             </Link>
           </li>
         </ul>
