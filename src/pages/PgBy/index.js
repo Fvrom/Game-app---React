@@ -8,12 +8,6 @@ import "./pgby.css";
 import GameCard from "../../components/GameCard";
 import Search from "../../components/search/search";
 
-//import Results from "./Results";
-
-//const Search = () => {
-
-// const [gameResults, setGameResults] = useState([])
-
 const TopRatedPage = () => {
   const clientId = process.env.REACT_APP_SYSTEMET_CLIENT;
   const { access_token } = queryString.parse(window.location.hash);
@@ -50,10 +44,5 @@ const TopRatedPage = () => {
     </>
   );
 };
-
-// Release date
-// Platsforms
-// metacritic rating
-// image
 
 export default TopRatedPage;

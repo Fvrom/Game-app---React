@@ -1,14 +1,11 @@
 import React from "react";
 import { Router } from "@reach/router";
-// import { Link } from "@reach/router";
-
 import HomePage from "./pages/Home";
 import TopRatedPage from "./pages/TopRated";
 import NewReleasePage from "./pages/NewRelease";
 import NintendoPage from "./pages/Upcoming";
 import PgByPage from "./pages/PgBy";
 import Search from '../src/components/search/search';
-
 import "./App.css";
 
 function App() {

@@ -34,18 +34,6 @@ const HomePage = () => {
       <Title title={"New Releases"} />
       <View>
         {AnticipatedGames.map((item, key) => {
-          // item.platforms.map((platformItem, platformItemIndex) => {
-          //   // console.log('platform', item.platform);
-
-          // //  return
-          // //   item.platform.map((item,key) => {
-          // //     console.log(item.platform);
-          // //   })
-
-          // console.log(platformItem.platform.name)
-          // return <GameCard key={platformItemIndex} platforms={platformItem.platform.name} />
-          // })
-
           return <GameCard key={key} item={item} />;
         })}
       </View>

@@ -35,7 +35,6 @@ const HomePage = () => {
       <Title title={"Most anticipated games"} />
       <View>
         {AnticipatedGames.map((item, key) => {
-          
 
           return <GameCard key={key} item={item} />;
         })}
