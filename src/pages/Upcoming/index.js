@@ -12,7 +12,7 @@ const TopRatedPage = () => {
   const clientId = process.env.REACT_APP_SYSTEMET_CLIENT;
   const { access_token } = queryString.parse(window.location.hash);
 
-  const [TopGames, setTopGames] = React.useState([]);
+  const [UpcomingGames, setUpcomingGames] = React.useState([]);
 
   React.useEffect(() => {
     const rootUrl = `https://api.rawg.io/api/games?dates=2021-06-01,2021-12-30&ordering=-added?&key=${clientId}`;
@@ -25,7 +25,7 @@ const TopRatedPage = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        setTopGames(json.results);
+        setUpcomingGames(json.results);
       });
   });
 
@@ -34,7 +34,7 @@ const TopRatedPage = () => {
       <Header></Header>
       <Title title={"Upcoming games"} />
       <View>
-        {TopGames.map((item, key) => {
+        {UpcomingGames.map((item, key) => {
           return <GameCard key={key} item={item} rating={"Metacritic: "} />;
         })}
       </View>
