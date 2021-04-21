@@ -1,14 +1,14 @@
-# Gaming News and more!
+A website displaying released games and upcoming games.
 
-A website displaying Top Rated games, New Releases and much more!
+A school project built with React. 
+
 
 Link to the website: https://gamesgames.netlify.app/
 
+Known issue:
+- env file in public. Does not seem to load properly without it for netlify. 
 
 
 ![Alt text](https://media.giphy.com/media/94DBMnpVEbJLy/source.gif)
 
 
-# Website Layout:
-
-![Alt text](https://github.com/MadosMark/Game-app---React/blob/main/Screenshot%202021-04-20%20at%2013.23.42.png)
