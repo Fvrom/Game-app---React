@@ -24,9 +24,8 @@ const HomePage = () => {
       .then((res) => res.json())
       .then((json) => {
         setAnticipatedGames(json.results);
-        
       });
-  },[access_token, clientId]);
+  }, [access_token, clientId]);
 
   return (
     <>
@@ -35,7 +34,6 @@ const HomePage = () => {
       <Title title={"Most anticipated games"} />
       <View>
         {AnticipatedGames.map((item, key) => {
-
           return <GameCard key={key} item={item} />;
         })}
       </View>

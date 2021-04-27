@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import "./gamecard.css";
 
 const GameCard = (props) => {
+  if (props.item.metacritic == null) {
+    return (props.item.metacritic = "Not available");
+  }
   return (
     <div className="card">
       <div className="image_container">
@@ -11,7 +14,9 @@ const GameCard = (props) => {
       <div className="card_info">
         <h3>{props.item.name}</h3>
         <h4>Release: {props.item.released}</h4>
-        <p>Available on platforms:</p>
+
+        <p> Metacritic: {props.item.metacritic} </p>
+
         <ul>
           {props.item.platforms?.map((platformItem, platformIndex) => (
             <li key={platformIndex}>{platformItem.platform.name}</li>
@@ -28,4 +33,3 @@ GameCard.propTypes = {
 };
 
 export default GameCard;
-
