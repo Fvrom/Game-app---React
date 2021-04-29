@@ -6,6 +6,7 @@
   border-radius: 5%;
   border: none;
   display: flex;
+  height: 50rem;
   flex-direction: column;
   margin: 1rem;
   box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.4);
@@ -66,5 +67,4 @@
   font-weight: 500;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  list-style-type: square;
 }
