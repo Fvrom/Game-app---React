@@ -4,7 +4,7 @@ import "./gamecard.css";
 
 const GameCard = (props) => {
   if (props.item.metacritic == null) {
-    return (props.item.metacritic = "Not available");
+    props.item.metacritic = "Not available";
   }
   return (
     <div className="card">
